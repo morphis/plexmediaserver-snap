@@ -1,6 +1,7 @@
 name: plexmediaserver
 version: 1.1.4.2757-24ffd60-1
 summary: Inofficial snap for the Plex media server
+architectures: [amd64]
 description: |
   Plex organizes all of your personal media so you can easily
   access and enjoy it. See https://www.plex.tv/
