@@ -4,13 +4,16 @@ summary: Inofficial snap for the Plex media server
 description: |
   Plex organizes all of your personal media so you can easily
   access and enjoy it. See https://www.plex.tv/
-confinement: devmode
+confinement: strict
 grade: devel
 
 apps:
   server:
     command: bin/server.sh
-    # daemon: simple
+    daemon: simple
+    plugs:
+      - home
+      - network-bind
 
 parts:
   common:
