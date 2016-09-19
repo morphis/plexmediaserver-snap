@@ -1,0 +1,15 @@
+#!/bin/bash
+
+export PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR="$SNAP_DATA/Library/Application_Support"
+export PLEX_MEDIA_SERVER_HOME=$SNAP_DATA
+export PLEX_MEDIA_SERVER_MAX_PLUGIN_PROCS=6
+export PLEX_MEDIA_SERVER_TMPDIR=/tmp
+export TMPDIR=$PLEX_MEDIA_SERVER_TMPDIR
+
+mkdir -p $PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR
+mkdir -p $PLEX_MEDIA_SERVER_HOME
+mkdir -p $PLEX_MEDIA_SERVER_HOME/Resources
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SNAP/usr/lib/plexmediaserver
+
+exec $SNAP/usr/lib/plexmediaserver/Plex\ Media\ Server

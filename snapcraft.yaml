@@ -1,0 +1,23 @@
+name: plexmediaserver
+version: 1.1.4.2757-24ffd60-1
+summary: Inofficial snap for the Plex media server
+description: |
+  Plex organizes all of your personal media so you can easily
+  access and enjoy it. See https://www.plex.tv/
+confinement: devmode
+grade: devel
+
+apps:
+  server:
+    command: bin/server.sh
+    # daemon: simple
+
+parts:
+  common:
+    plugin: dump
+    source: .
+    snap:
+      - bin/server.sh
+  plexmediaserver:
+    plugin: make
+    source: .
