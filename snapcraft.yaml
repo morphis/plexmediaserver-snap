@@ -4,7 +4,7 @@ summary: Inofficial snap for the Plex media server
 description: |
   Plex organizes all of your personal media so you can easily
   access and enjoy it. See https://www.plex.tv/
-confinement: strict
+confinement: devmode
 grade: devel
 
 apps:
