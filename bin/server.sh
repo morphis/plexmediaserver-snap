@@ -15,4 +15,8 @@ mkdir -p $PLEX_MEDIA_SERVER_HOME/Resources
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SNAP/usr/lib/plexmediaserver
 
+# See https://forums.plex.tv/discussion/26959/any-idea-whats-causing-this-error-when-running-start-sh
+# for details. Required to get video playback working.
+export LC_ALL=C
+
 exec $SNAP/usr/lib/plexmediaserver/Plex\ Media\ Server
