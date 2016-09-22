@@ -9,4 +9,4 @@ To build and install the snap:
  $ sudo snap install --devmode --force-dangerous plexmediaserver_*_amd64.snap
 ```
 
-Afterwards you can reach the server on http://<your host IP address>:32400
+You may reach the web interface at http://<your host IP address>:32400/web/index.html
