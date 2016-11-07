@@ -1,5 +1,5 @@
 name: plexmediaserver
-version: 1.2.2.2857-d34b464-1
+version: 1.2.2.2857-d34b464
 summary: Unofficial snap for the Plex media server
 architectures: [amd64]
 description: |
@@ -20,9 +20,9 @@ apps:
 parts:
   common:
     plugin: dump
-    source: .
-    snap:
-      - bin/server.sh
+    source: bin
+    organize:
+      server.sh: bin/server.sh
   plexmediaserver:
-    plugin: make
-    source: .
+    plugin: dump
+    source: https://downloads.plex.tv/plex-media-server/$SNAPCRAFT_PROJECT_VERSION/plexmediaserver_$SNAPCRAFT_PROJECT_VERSION_amd64.deb
