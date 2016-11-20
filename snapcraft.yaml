@@ -1,5 +1,5 @@
-name: plex-mediaserver
 version: 1.2.2.2857-d34b464-1
+name: plexmediaserver
 summary: Unofficial snap for the Plex media server
 architectures: [amd64]
 description: |
