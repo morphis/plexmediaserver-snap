@@ -25,4 +25,4 @@ parts:
       server.sh: bin/server.sh
   plexmediaserver:
     plugin: dump
-    source: https://downloads.plex.tv/plex-media-server/1.2.7.2987-1bef33a/plexmediaserver_1.2.7.2987-1bef33a_amd64.deb
+    source: https://downloads.plex.tv/plex-media-server/$SNAPCRAFT_PROJECT_VERSION/plexmediaserver_$SNAPCRAFT_PROJECT_VERSION_amd64.deb
