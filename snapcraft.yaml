@@ -5,8 +5,8 @@ architectures: [amd64]
 description: |
   Plex organizes all of your personal media so you can easily
   access and enjoy it. See https://www.plex.tv/
-confinement: devmode
-grade: devel
+confinement: strict
+grade: stable
 
 apps:
   server:
@@ -14,6 +14,7 @@ apps:
     daemon: simple
     plugs:
       - home
+      - network
       - network-bind
       - removable-media
 
