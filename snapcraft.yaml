@@ -24,5 +24,11 @@ parts:
     organize:
       server.sh: bin/server.sh
   plexmediaserver:
-    plugin: dump
-    source: https://downloads.plex.tv/plex-media-server/$SNAPCRAFT_PROJECT_VERSION/plexmediaserver_$SNAPCRAFT_PROJECT_VERSION_amd64.deb
+    plugin: nil
+    build-packages:
+      - wget
+      - dpkg
+    prepare: |
+      wget https://downloads.plex.tv/plex-media-server/$SNAPCRAFT_PROJECT_VERSION/plexmediaserver_$SNAPCRAFT_PROJECT_VERSION_amd64.deb
+    install: |
+      dpkg-deb -x plexmediaserver_$SNAPCRAFT_PROJECT_VERSION_amd64.deb $SNAPCRAFT_PART_INSTALL
